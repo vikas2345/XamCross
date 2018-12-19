@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamCross.Views;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace XamCross
@@ -11,7 +12,7 @@ namespace XamCross
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new Timer();
         }
 
         protected override void OnStart()
