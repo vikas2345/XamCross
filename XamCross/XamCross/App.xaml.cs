@@ -12,7 +12,7 @@ namespace XamCross
         {
             InitializeComponent();
 
-            MainPage = new LoginPage();
+            MainPage = new TwoWayBinding();
         }
 
         protected override void OnStart()

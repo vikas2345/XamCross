@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamCross.Views.TwoWayBinding">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" 
+                HorizontalOptions="Center" >
+            <Label Text="Two Way Data Binding Example Usage ✍" FontAttributes="Bold"/>
+            <Label Text="Forename "></Label>
+            <Entry x:Name="EntForename" Text="{Binding Forename, Mode=TwoWay}" ></Entry>
+
+            <Label Text="Surname "></Label>
+            <Entry x:Name="EntSurname" Text="{Binding Surname, Mode=TwoWay}" ></Entry>
+
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Your forename is: ⚔"></Label>
+                <Label Text="{Binding Forename}"></Label>
+            </StackLayout>
+
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Your Surname is: ⚔"></Label>
+                <Label Text="{Binding Surname}"></Label>
+            </StackLayout>
+
+
+
+
+        </StackLayout>
+
+        
+        
+    </ContentPage.Content>
+</ContentPage>
