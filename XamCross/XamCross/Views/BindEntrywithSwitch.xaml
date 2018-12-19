@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamCross.Views.BindEntrywithSwitch">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" 
+                HorizontalOptions="FillAndExpand" Padding="20,100,20,0" Spacing="15">
+            <Label Text="Person name"/>
+            <Entry Text="{Binding PersonName}" Placeholder="Your Name"></Entry>
+
+            <Label Text="WorksIn"/>
+            <Entry Text="{Binding WorksIn}" Placeholder="Your Website"></Entry>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Save Data"></Label>
+                <Switch IsToggled="{Binding MySwitch}"></Switch>
+            </StackLayout>
+            <Label Text="{Binding DescriptionHeader}"></Label>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
