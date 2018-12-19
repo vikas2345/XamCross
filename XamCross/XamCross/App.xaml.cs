@@ -12,7 +12,7 @@ namespace XamCross
         {
             InitializeComponent();
 
-            MainPage = new Timer();
+            MainPage = new LoginPage();
         }
 
         protected override void OnStart()

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamCross.Views.LoginPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand">
+            <Label Text="Username :"></Label>
+            <Label Text="{Binding LoginPageModel.UserName}"/>
+
+            <Label Text="password:" ></Label>
+            <Label Text="{Binding LoginPageModel.Password}"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
