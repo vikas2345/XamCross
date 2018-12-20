@@ -42,6 +42,7 @@ namespace XamCross.View_Model
             if (PropertyChanged != null)
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyChanged));
+
             }
         }
     }
