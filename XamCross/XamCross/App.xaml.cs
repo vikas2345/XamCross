@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using XamCross.Data;
+using XamCross.Helpers;
 using XamCross.Views;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
@@ -11,12 +12,14 @@ namespace XamCross
     {
         static UserDatabaseController userDatabase;
         static TokenDatabaseController tokenDatabase;
+        static EmployeeDatabaseController employeeDatabase;
+
 
         public App()
         {
             InitializeComponent();
 
-            MainPage = new TwoWayBinding();
+            MainPage = new NavigationPage( new EmployeeListPage());
         }
 
         protected override void OnStart()
@@ -58,6 +61,18 @@ namespace XamCross
             }
         }
 
+
+        public static EmployeeDatabaseController EmployeeDatabase
+        {
+            get
+            {
+                if (employeeDatabase == null)
+                {
+                    employeeDatabase = new EmployeeDatabaseController(DependencyService.Get<ILocalFileHelper>().GetLocalFilePath("Employee.db3"));
+                }
+                return employeeDatabase;
+            }
+        } 
 
     }
 }
