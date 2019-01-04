@@ -29,6 +29,14 @@ namespace XamCross.Views
             Navigation.PushAsync(new EmployeePage() { BindingContext = new Employee()});
         }
 
+        async void EmployeeListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if(e.SelectedItem != null)
+            {
+                await Navigation.PushAsync(new EmployeePage() { BindingContext = e.SelectedItem as Employee });
+            }
 
+            
+        }
     }
 }

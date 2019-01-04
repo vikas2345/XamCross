@@ -4,7 +4,7 @@
              x:Class="XamCross.Views.EmployeeListPage">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="EmployeeListView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <ListView x:Name="EmployeeListView" ItemSelected="EmployeeListView_ItemSelected" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <TextCell Text="{Binding EmpName}" Detail="{Binding Designation}"></TextCell>

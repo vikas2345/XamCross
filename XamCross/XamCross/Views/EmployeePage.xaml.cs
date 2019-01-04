@@ -1,30 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamCross.Model.SQLite;
 
 namespace XamCross.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class EmployeePage : ContentPage
-	{
-		public EmployeePage ()
-		{
-			InitializeComponent ();
-		}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class EmployeePage : ContentPage
+    {
+        public EmployeePage()
+        {
+            InitializeComponent();
+        }
 
-		private void SaveClicked(object sender, EventArgs e)
-		{
+        async void SaveClicked(object sender, EventArgs e)
+        {
+            var personItem = (Employee)BindingContext;
+            await App.EmployeeDatabase.SaveEmployeeAsync(personItem);
 
-		}
+            await Navigation.PopAsync();
 
-		private void CancelClicked(object sender, EventArgs e)
-		{
 
-		}
-	}
+        }
+
+        async void CancelClicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
+    }
 }
