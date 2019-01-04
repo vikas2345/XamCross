@@ -11,7 +11,10 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using SQLite;
+using Xamarin.Forms;
 using XamCross.Data;
+
+[assembly: Dependency(typeof(XamCross.Droid.Data.SQLite_Droid))]
 
 namespace XamCross.Droid.Data
 {
@@ -23,6 +26,9 @@ namespace XamCross.Droid.Data
             string documentPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
 
             var path = Path.Combine(documentPath, sqliteFileName);
+            var conn = new SQLiteConnection(path);
+
+            return conn;
         }
     }
 }
