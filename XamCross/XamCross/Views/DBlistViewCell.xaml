@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamCross.Views.DBlistViewCell">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView 
+                        x:Name="todayActivities"
+                        SeparatorColor="Transparent"
+                        BackgroundColor="Transparent"
+                        IsGroupingEnabled="true"
+                        IsPullToRefreshEnabled="true"
+                        ItemTapped="Handle_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label TextColor="White" FontSize="20" HorizontalOptions="Center" x:Name="title"/>
+                            <Grid>
+                                <Label TextColor="White" FontSize="15" HorizontalOptions="Start" x:Name="location" Grid.Row="0" Grid.Column="0" Text="{Binding Activitylocation}"/>
+                                <Label TextColor="White" FontSize="15" HorizontalOptions="End" x:Name="time" Grid.Row="0" Grid.Column="1"/>
+                                <Label TextColor="White" FontSize="15" HorizontalOptions="End" x:Name="organizer" Grid.Row="1" Grid.Column="0"/>
+                                <Button Text="Request to join" TextColor="White" FontSize="15" Clicked="Handle_Clicked_5" Grid.Row="1" Grid.Column="1"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
