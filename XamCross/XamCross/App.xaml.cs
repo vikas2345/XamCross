@@ -20,6 +20,7 @@ namespace XamCross
             InitializeComponent();
 
             MainPage = new NavigationPage( new EmployeeListPage());
+            // add navigation
         }
 
         protected override void OnStart()
