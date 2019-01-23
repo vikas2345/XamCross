@@ -161,4 +161,7 @@
       <Name>XamCross</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\down_arrow.png" />
+  </ItemGroup>
 </Project>

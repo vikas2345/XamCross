@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamCross.Views.LoginPageView">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>0,20,0,0</OnPlatform.iOS>
+            <OnPlatform.Android>0,0,0,0</OnPlatform.Android>
+            <OnPlatform.WinPhone>0,0,0,0</OnPlatform.WinPhone>
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    
+    <ContentPage.Content>
+
+        <StackLayout x:Name="MainLayout">
+            <Picker x:Name="PickerSelectLanguage" HorizontalOptions="FillAndExpand" Title="Select Language">
+                <Picker.Items>
+                    <x:String>English</x:String>
+                    <x:String>Hindi</x:String>
+                </Picker.Items>
+            </Picker>
+            <Grid BackgroundColor="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+
+                <StackLayout x:Name="languageSelectLayout" Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,0">
+                    <Label Text="Select Language"></Label>
+                    <Image Source="down_arrow.png" Opacity="0.6" VerticalOptions="Start" Margin="0,3,0,0"></Image>
+             
+                </StackLayout>
+
+                <StackLayout x:Name="languageSelectLayout" Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,0">
+                    <Label Text="Select Language"></Label>
+                    <Image Source="down_arrow.png" Opacity="0.6" VerticalOptions="Start" Margin="0,3,0,0"></Image>
+
+                </StackLayout>
+
+
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+    
+    
+</ContentPage>
