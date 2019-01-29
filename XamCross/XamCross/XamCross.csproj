@@ -39,5 +39,22 @@
     <EmbeddedResource Update="Views\TwoWayBinding.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\ValidationBehavior.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Animation\" />
+    <Folder Include="Controls\" />
+    <Folder Include="Converters\" />
+    <Folder Include="Effects\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Validations\" />
+    <Folder Include="Triggers\" />
+    <Folder Include="Services\" />
+    <Folder Include="Property\" />
+    <Folder Include="Properties\" />
   </ItemGroup>
 </Project>

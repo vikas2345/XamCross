@@ -19,7 +19,8 @@ namespace XamCross
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage( new EmployeeListPage());
+            //MainPage = new NavigationPage( new EmployeeListPage());
+            MainPage = new ValidationBehavior();
             // add navigation
         }
 
