@@ -20,7 +20,7 @@ namespace XamCross
             InitializeComponent();
 
             //MainPage = new NavigationPage( new EmployeeListPage());
-            MainPage = new ValidationBehavior();
+            MainPage = new FirebaseStoragePage();
             // add navigation
         }
 
